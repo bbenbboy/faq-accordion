@@ -1,0 +1,93 @@
+@import "../style.scss";
+
+.faqContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+
+  .imgContainer {
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+
+    img {
+      width: 100vw;
+      height: auto;
+
+      @include mobile {
+        transform: scale(3);
+        width: 100vh;
+      }
+    }
+  }
+
+  .textContainer {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 20px;
+    z-index: 5;
+    padding: 30px;
+
+    @include mobile {
+      width: 300px;
+    }
+
+    .headContainer {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+
+      h1 {
+        font-size: 50px;
+        font-weight: bold;
+        margin: 10px 0;
+
+        @include mobile {
+          font-size: 40px;
+        }
+      }
+      img {
+        @include mobile {
+          height: 30px;
+          width: 30px;
+        }
+      }
+    }
+    .questionContainer {
+      cursor: pointer;
+      max-width: 600px;
+
+      .iconContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include mobile {
+          font-size: 14px;
+        }
+
+        img {
+          height: 30px;
+          width: 30px;
+        }
+        p {
+          @include mobile {
+            font-size: 10px;
+          }
+        }
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      hr {
+        border: 1px solid hsl(275, 100%, 97%);
+      }
+    }
+  }
+}

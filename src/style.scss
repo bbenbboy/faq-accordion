@@ -1,0 +1,11 @@
+body {
+  background-color: hsl(275, 100%, 97%);
+  margin: 0;
+  padding: 0;
+}
+
+@mixin mobile {
+  @media (max-width: 738px) {
+    @content;
+  }
+}
